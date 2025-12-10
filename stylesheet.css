@@ -281,26 +281,64 @@ main {
 
 /* FLOATING WHATSAPP BUTTON */
 .whatsapp-float {
+    /* ... (Aturan yang sudah ada) ... */
     position: fixed;
-    width: 60px;
+    width: 60px; /* Lebar default tombol */
     height: 60px;
     bottom: 40px;
     right: 40px;
-    background-color: #25d366; 
+    background-color: #25d366;
     color: #FFF;
     border-radius: 50px;
     text-align: center;
     box-shadow: 2px 2px 3px #999;
     z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    /* Ganti display ke flex untuk menampung gambar & teks */
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; /* Geser ke kiri untuk ekspansi */
+
     text-decoration: none;
     font-size: 1.2em;
-    transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out, padding 0.3s;
     overflow: hidden;
+    padding: 0 10px; /* Padding untuk tombol default */
 }
 
+/* Mengatur gambar di dalam tombol */
+.whatsapp-icon-img {
+    width: 30px; /* Ukuran gambar ikon */
+    height: 30px;
+    margin-right: 0; /* Margin akan ditambahkan saat hover */
+    transition: margin-right 0.3s;
+}
+
+/* Mengatur teks di dalam tombol */
+.whatsapp-text {
+    font-weight: bold;
+    font-size: 0.9em;
+    white-space: nowrap; /* Mencegah teks turun baris */
+    opacity: 0; /* Default: Sembunyikan teks */
+    width: 0;
+    transition: opacity 0.3s, width 0.3s;
+}
+
+/* Efek Hover (memperlebar tombol dan menampilkan teks) */
+.whatsapp-float:hover {
+    width: 150px; /* Lebar tombol saat di-hover */
+    border-radius: 4px;
+    padding: 0 20px;
+}
+
+.whatsapp-float:hover .whatsapp-icon-img {
+    margin-right: 10px; /* Beri jarak antara ikon dan teks saat hover */
+}
+
+.whatsapp-float:hover .whatsapp-text {
+    opacity: 1; /* Tampilkan teks */
+    width: auto;
+}
 
 /* FOOTER (PERBAIKAN KERAPIHAN FINAL) */
 footer {
