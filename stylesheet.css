@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8; /* Tetap pertahankan background abu muda */
+    background-color: #f8f8f8;
     color: #333;
     line-height: 1.6;
     overflow-x: hidden;
@@ -24,7 +24,6 @@ header {
     background-color: #ffffff;
     padding: 15px 0;
     border-bottom: 2px solid #348e86;
-    /* Dibuat lebih halus */
     box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
 }
 
@@ -51,7 +50,7 @@ header {
     transition: background-color 0.2s ease;
 }
 .login-button:hover {
-    background-color: #2a7269; /* Hover effect */
+    background-color: #2a7269; 
 }
 
 
@@ -64,7 +63,6 @@ main {
     background: #ffffff;
     padding: 30px;
     border-radius: 8px;
-    /* PERBAIKAN: Menggunakan bayangan yang lebih lembut */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
     max-width: 450px;
     margin: 0 auto;
@@ -193,7 +191,7 @@ main {
     margin-top: 10px;
     font-size: 1.1em;
     font-weight: 700;
-    border: 1px solid #e0e0e0; /* Border halus */
+    border: 1px solid #e0e0e0;
 }
 #copy-btn {
     flex-shrink: 0;
@@ -214,7 +212,7 @@ main {
 
 /* WAKTU PEMROSESAN */
 .processing-time-note {
-    background-color: #e8f5e9; /* Latar belakang sangat terang */
+    background-color: #e8f5e9; 
     border-left: 4px solid #348e86;
     padding: 10px;
     margin-top: 20px;
@@ -320,7 +318,6 @@ footer {
 /* Grid Baru untuk 4 Kolom */
 .footer-grid-transformed {
     display: grid;
-    /* Mengatur 4 kolom dengan pembagian lebar yang rata */
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding-bottom: 30px;
@@ -405,7 +402,7 @@ footer {
     color: #348e86;
 }
 
-/* Baris Legalitas Utama (Sudah Ada) */
+/* Baris Legalitas Utama */
 .footer-copyright-text {
     padding: 20px 0;
     font-size: 0.75em;
@@ -430,9 +427,9 @@ footer {
 }
 
 
-/* RESPONSIVENESS (FINAL & PRESISI) */
+/* RESPONSIVENESS */
 @media (max-width: 991px) {
-    /* Mengubah grid footer 4 kolom menjadi 2 kolom */
+    /* Mengubah grid footer 4 kolom menjadi 2 kolom di tablet */
     .footer-grid-transformed {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -440,9 +437,8 @@ footer {
         padding-bottom: 20px;
         border-bottom: 1px solid #333;
     }
-    /* Memastikan kolom logo/sosial menempati lebar penuh di tablet */
     .logo-social-column {
-        grid-column: span 2; 
+        grid-column: span 2; /* Kolom logo mengambil 2 kolom penuh */
     }
 }
 @media (max-width: 768px) {
@@ -452,16 +448,6 @@ footer {
     }
     .footer-column:last-child {
         border-bottom: none;
-    }
-
-    /* Perubahan untuk grid lama yang sudah dihapus, tapi dipertahankan untuk keamanan */
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: left;
-    }
-    .footer-column {
-        padding-bottom: 20px;
-        border-bottom: 1px solid #333;
     }
 }
 @media (max-width: 480px) {
