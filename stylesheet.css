@@ -14,8 +14,8 @@ body {
 }
 
 .container {
-    width: 95%;
-    max-width: 1500px;
+    width: 100%;
+    max-width: 767px;
     margin: 0 auto;
 }
 
@@ -34,7 +34,7 @@ header {
 }
 
 .header-logo {
-    height: 45px;
+    height: auto;
     transition: opacity 0.3s;
 }
 
