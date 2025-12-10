@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 90%;
     max-width: 767px;
     margin: 0 auto;
 }
@@ -34,8 +34,8 @@ header {
 }
 
 .header-logo {
-    height: auto;
-    transition: opacity 0.3s;
+    height: 50px;
+    transition: opacity 0.2s;
 }
 
 .login-button {
